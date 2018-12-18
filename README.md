@@ -12,3 +12,5 @@ String jsonString = sharedPreferences.getString("_default_config_tag", "");
 你打印出来文件名看看，就算那个fileName
 
 你还要确认里面是不是确实有数据
+
+你是C进程去删数据，A 还算 B去写数据 还是C?
