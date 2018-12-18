@@ -10,3 +10,5 @@ String jsonString = sharedPreferences.getString("_default_config_tag", "");
 你能一次取出share里面的所有数据吗？看看能不能获取其他的数据
 
 你打印出来文件名看看，就算那个fileName
+
+你还要确认里面是不是确实有数据
