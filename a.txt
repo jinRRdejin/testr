@@ -1,2 +1,21 @@
 
 问题解决没？
+貌似都没拿到写的进程的数据，进入写的进程了数据是空的  @Override
+    public Bundle call(String method, @Nullable String arg, @Nullable Bundle extras) {
+        Log.d(TAG, "call: start");
+        if (TextUtils.isEmpty(method)) {
+            Log.e(TAG, "method is null");
+            return null;
+        }
+        Context context = getContext();
+        if(context == null){
+            Log.e(TAG, "context is null");
+            return null;
+        }
+        String fileName = extras.getString(HiAnalyticsDataParsingUtils.NAME_KEY);
+        switch (method) {
+            case HiAnalyticsDataParsingUtils.METHOPD:
+                SharedPreferences sharedPreferences = context.getSharedPreferences(fileName,
+                        Context.MODE_PRIVATE);
+                String jsonString = sharedPreferences.getString("_default_config_tag", "");
+                Log.d(TAG, "jsonString111 === " + jsonString);
