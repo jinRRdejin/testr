@@ -2,3 +2,7 @@
 
 
 仔细检查是不是文件名错了
+
+
+String jsonString = sharedPreferences.getString("_default_config_tag", "");
+这一句就是取数据的吧， 看看是不是_default_config_tag写错了
